@@ -15,8 +15,8 @@
 </head>
 <body class="text-gray-900 leading-normal bg-lime-700">
     <a href="#content" class="sr-only">skip to main content</a>
-    <div role="document" class="min-h-screen flex flex-col">
-        <div class="fixed top-0 left-0 w-screen h-screen flex flex-col">
+    <div role="document" class="min-h-screen flex flex-col relative">
+        <div class="fixed top-0 left-0 w-screen h-screen flex flex-col z-0">
             <div class="w-full h-60 bg-gradient-to-b from-fuchsia-600 via-red-400 to-yellow-300 flex-1">
             </div>
             <div class="w-full h-40 bg-gradient-to-b from-yellow-300 to-yellow-200 flex-none">
@@ -26,7 +26,7 @@
             </div>
         </div>
         {% include "header.njk" %}
-        <main class="flex-grow w-full p-4" id="content" tabindex="-1">
+        <main class="flex-grow w-full p-4 relative" id="content" tabindex="-1">
             {{ content | safe }}
         </main>
         {% include "footer.njk" %}

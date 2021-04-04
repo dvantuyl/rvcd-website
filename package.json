@@ -31,6 +31,7 @@
     "@babel/core": "^7.12.16",
     "@babel/preset-env": "^7.12.16",
     "@fullhuman/postcss-purgecss": "^4.0.0",
+    "@tailwindcss/typography": "^0.4.0",
     "alpinejs": "^2.8.2",
     "autoprefixer": "^10.2.4",
     "babel-eslint": "^10.1.0",

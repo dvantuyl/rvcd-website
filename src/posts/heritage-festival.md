@@ -1,9 +1,10 @@
 ---
 title: South End Heritage Festival Celebrates Local Musical Talent
-layout: page
-tags:
-  - post
-  - home
+layout: post
+url: 'https://southseattleemerald.com/2019/07/31/south-end-heritage-festival-celebrates-local-musical-talent/#more-38110'
+image_url: 'https://i0.wp.com/southseattleemerald.com/wp-content/uploads/2019/07/south_end_heritage_festival_07.jpg?resize=1038%2C576&ssl=1'
+tags: ['post', 'home']
+date: 2019-07-31
 blurb: Music from two different block parties wound its way down the block and into the ears of Columbia City’s and Hillman City’s pedestrians on the late afternoon of July 27. The parties, held at Big Chickie and City Teriyaki, were part of the first annual South End Heritage Festival.
 ---
 
