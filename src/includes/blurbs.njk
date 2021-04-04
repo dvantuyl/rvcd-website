@@ -1,0 +1,21 @@
+<ol reversed class="w-full">
+{% for post in collections.post | reverse %}
+  <li class="h-auto w-full bg-amber-200 bg-opacity-60 hover:bg-opacity-70 transition duration-300 ease-in-out px-10 py-5 rounded-xl z-50 mb-20">
+    <a href="{{ post.url | url }}" class="flex flex-col md:flex-row w-full h-auto">
+      <div class="h-64 w-full md:w-1/3 mr-10 mb-5 md:mb-0 flex-none">
+        <img src="{{ post.data.image_url }}" class="h-full w-full object-cover rounded-xl" />
+      </div>
+      <div>
+        <h4 class="block font-title text-pink-700 text-xl">
+          {% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}
+        </h4>
+        <time class="text-gray-600 text-lg font-semibold" datetime="{{ post.date | dateToFormat('yyyy-LL-dd') }}">{{ post.date | dateToFormat('dd LLL yyyy') }}</time>
+        <br/><br/>
+        <article class="text-gray-700 prose prose-lg font-semibold">
+          {{post.data.blurb}}
+        </article>
+      </div>
+    </a>
+  </li>
+{% endfor %}
+</ol>
