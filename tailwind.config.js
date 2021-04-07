@@ -21,6 +21,7 @@ module.exports = {
         maroon: theme('colors.maroon.700'),
       }),
       colors: {
+        // @ref https://tailwind.ink => Brand Color: #667B23
         olive: {
           50: '#f9f9f2',
           100: '#f5f0c3',

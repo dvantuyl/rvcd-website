@@ -1,6 +1,6 @@
 <ol reversed class="w-full">
 {% for post in collections.post | reverse %}
-  <li class="h-80 w-full bg-sunset-200 bg-opacity-70 rounded z-50 mb-10 ">
+  <li class="h-80 w-full bg-chocolate-200 bg-opacity-70 rounded z-50 mb-10 shadow-lg">
     <a href="{{ post.url | url }}" class="flex flex-col md:flex-row w-full justify-end h-full">
       <div class="flex-grow py-5 px-10  flex flex-col overflow-hidden relative h-full">
         <div class="flex-none mb-5">
@@ -13,7 +13,7 @@
           {{post.data.blurb}}
         </article>
       </div>
-      <div class="h-full w-full md:w-1/2 flex-none border-l-4 border-blush-700 border-opacity-50">
+      <div class="h-full w-full md:w-1/2 flex-none border-l-4 border-blush-700 border-opacity-60">
         <img src="{{ post.data.image_url }}" class="h-full w-full object-cover rounded-tr rounded-br" />
       </div>
     </a>

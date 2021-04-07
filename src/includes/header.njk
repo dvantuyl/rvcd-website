@@ -3,7 +3,7 @@
         class="text-lg font-bold leading-tight">
         <h1 class="font-normal font-title text-sunset-300 text-6xl md:text-7xl lg:text-8xl tracking-wider mx-5">Rainier</h1>
         <h1 class="font-normal font-title text-sunset-300 text-6xl md:text-7xl lg:text-8xl tracking-wider mx-5">Valley</h1>
-        <h2 class="font-normal bg-blush-700 text-sunset-400 hover:bg-blush-600 rounded font-title text-2xl md:text-3xl lg:text-4xl text-center px-3 py-1 mt-12 tracking-wider shadow-md">Creative District</h2>
+        <h2 class="font-normal bg-blush-700 text-sunset-400 hover:bg-sunset-300 hover:text-blush-700 ease-out rounded font-title text-2xl transition duration-300 md:text-3xl lg:text-4xl text-center px-3 py-1 mt-12 tracking-wider shadow-md">Creative District</h2>
     </a>
     <nav role="navigation" tabindex="-1" aria-label="Main" class="mt-20 w-full ">
         <ul class="flex flex-col  spacing-x-4 w-full justify-around sticky top-12">
@@ -12,7 +12,7 @@
             {%- set isParent = item.url != '/' and item.url in page.url -%}
             <li class="mb-10">
                 <a
-                    class="whitespace-nowrap font-bold font-subtitle text-blush-700 border-l-8 border-blush-800 rounded-tr rounded-br bg-sunset-300 opacity-80 bg-opacity-80 hover:opacity-100 px-3 text-lg sm:text-xl md:text-2xl lg:text-3xl transition duration-300 ease-out tracking-wider"
+                    class="nav-item"
                     href="{% if isCurrent %}#content{% else %}{{ item.url | url }}{% endif %}"
                     {% if isCurrent %}aria-current="page"{% endif %}
                 >
@@ -22,4 +22,9 @@
         {%- endfor -%}
         </ul>
     </nav>
+    <div class="w-full pt-10 border-opacity-50">
+       <a href="https://www.paypal.com/donate?hosted_button_id=DNSR3JW3RD69L" class="nav-item">
+            ♥ GIVE
+       </a>
+    </div>
 </header>
