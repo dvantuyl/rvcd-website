@@ -1,3 +1,7 @@
+---
+background: index
+---
+
 <!DOCTYPE html>
 <html lang="{{ meta.lang }}" class="bg-white antialiased">
 <head>
@@ -13,23 +17,19 @@
     <link rel="stylesheet" href="{{ '/assets/main.css' | url }}">   
     {% include "meta.njk" %}
 </head>
-<body class="text-gray-900 leading-normal bg-lime-700">
+<body class="text-gray-900 leading-normal">
+    {% include "background.njk" %}
+
     <a href="#content" class="sr-only">skip to main content</a>
-    <div role="document" class="min-h-screen flex flex-col relative">
-        <div class="fixed top-0 left-0 w-screen h-screen flex flex-col z-0">
-            <div class="w-full h-60 bg-gradient-to-b from-fuchsia-600 via-red-400 to-yellow-300 flex-1">
-            </div>
-            <div class="w-full h-40 bg-gradient-to-b from-yellow-300 to-yellow-200 flex-none">
-                <img src="/assets/images/backgrounds/valley.png" class="w-full h-full"></img>
-            </div>
-            <div class="w-full bg-vines-01 bg-repeat-x opacity-10 flex-grow">
-            </div>
+
+    <div role="document" class="w-screen flex relative">
+        <div class="flex-none w-auto h-screen static overflow-hidden">
+            {% include "header.njk" %}
         </div>
-        {% include "header.njk" %}
-        <main class="flex-grow w-full p-4 relative" id="content" tabindex="-1">
+        <main class="flex-grow h-screen p-4 overflow-y-auto relative" id="content" tabindex="-1">
             {{ content | safe }}
         </main>
-        {% include "footer.njk" %}
+
     </div>
     <script src="{{ '/assets/main.js' | url }}" defer></script> 
     <!-- LAST BUILD: {{ build.env}} {{ build.timestamp | dateToISO }} -->

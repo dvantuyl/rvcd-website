@@ -1,18 +1,18 @@
-<header role="banner" class="p-4 flex flex-col items-center z-10 relative top-36 container mx-auto">
+<header role="banner" class="flex flex-col items-center z-10 relative top-20 pl-10 container mx-auto h-full">
     <a href="{{ build.url }}" rel="home"
         class="text-lg font-bold leading-tight">
-        <h1 class="text-stroke-pink font-title text-pink-500 text-6xl md:text-7xl lg:text-8xl tracking-wider mx-5">Rainier</h1>
-        <h1 class="text-stroke-pink font-title text-pink-500 text-6xl md:text-7xl lg:text-8xl tracking-wider mx-5">Valley</h1>
-        <h2 class="bg-pink-600 rounded-xl font-title text-amber-400 text-2xl md:text-3xl lg:text-4xl text-center px-3 py-1 mt-12 tracking-wider font-normal shadow-md">Creative District</h2>
+        <h1 class="font-normal font-title text-sunset-300 text-6xl md:text-7xl lg:text-8xl tracking-wider mx-5">Rainier</h1>
+        <h1 class="font-normal font-title text-sunset-300 text-6xl md:text-7xl lg:text-8xl tracking-wider mx-5">Valley</h1>
+        <h2 class="font-normal bg-blush-700 text-sunset-400 hover:bg-blush-600 rounded font-title text-2xl md:text-3xl lg:text-4xl text-center px-3 py-1 mt-12 tracking-wider shadow-md">Creative District</h2>
     </a>
-    <nav role="navigation" tabindex="-1" aria-label="Main" class="mt-16 md:mt-20 lg:mt-24 w-full">
-        <ul class="flex flex-wrap align-center spacing-x-4 w-full justify-around">
+    <nav role="navigation" tabindex="-1" aria-label="Main" class="mt-20 w-full ">
+        <ul class="flex flex-col  spacing-x-4 w-full justify-around sticky top-12">
         {%- for item in collections.all | eleventyNavigation -%}
             {%- set isCurrent = (item.url == page.url) -%}
             {%- set isParent = item.url != '/' and item.url in page.url -%}
             <li class="mb-10">
                 <a
-                    class="whitespace-nowrap font-title text-amber-400 text-lg sm:text-xl md:text-2xl lg:text-3xl rounded-xl bg-lime-700 px-3 py-1 hover:bg-lime-800 transition duration-300 ease-out shadow-md tracking-wider"
+                    class="whitespace-nowrap font-bold font-subtitle text-blush-700 border-l-8 border-blush-800 rounded-tr rounded-br bg-sunset-300 opacity-80 bg-opacity-80 hover:opacity-100 px-3 text-lg sm:text-xl md:text-2xl lg:text-3xl transition duration-300 ease-out tracking-wider"
                     href="{% if isCurrent %}#content{% else %}{{ item.url | url }}{% endif %}"
                     {% if isCurrent %}aria-current="page"{% endif %}
                 >

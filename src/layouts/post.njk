@@ -1,11 +1,13 @@
 ---
 layout: page
 ---
-<div class="h-auto w-full bg-amber-200 bg-opacity-60 px-10 py-5 rounded-xl z-50">
-  <h3 class="font-title font-normal tracking-wider text-2xl font-bold leading-tight mb-4 text-pink-900">{{title}}</h3>
-  <img src="{{image_url}}" class="w-full h-auto rounded-xl my-12"/>
-  <time class="text-gray-800 text-lg font-semibold" datetime="{{ date | dateToFormat('yyyy-LL-dd') }}">{{ date | dateToFormat('dd LLL yyyy') }}</time>
-  <article class="text-gray-700 prose prose-lg font-semibold max-w-none">
-    {{content | safe}}
-  </article>
+<div class="min-h-screen w-full bg-sunset-200 bg-opacity-80 rounded z-50">
+  <img src="{{image_url}}" class="w-full max-h-screen object-cover rounded-tl rounded-tr"/>
+  <div class="px-10 py-5 border-t-4 border-blush-700 border-opacity-50">
+    <h3 class="font-subtitle font-semibold tracking-wider text-3xl font-bold leading-tight text-blush-700">{{title}}</h3>
+    <time class="text-gray-800 text-xl font-semibold mb-5 block" datetime="{{ date | dateToFormat('yyyy-LL-dd') }}">{{ date | dateToFormat('dd LLL yyyy') }}</time>
+    <article class="text-gray-700 prose prose-xl font-default font-semibold">
+      {{content | safe}}
+    </article>
+  </div>
 </div>
