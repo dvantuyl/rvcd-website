@@ -1,6 +1,6 @@
 <ol reversed class="w-full">
 {% for post in collections.post | reverse %}
-  <li class="h-80 w-full bg-chocolate-200 bg-opacity-70 rounded z-50 mb-10 shadow-lg">
+  <li class="h-80 w-full bg-gradient-to-r from-chocolate-100 to-chocolate-500 rounded z-50 mb-10 shadow-lg">
     <a href="{{ post.url | url }}" class="flex flex-col md:flex-row w-full justify-end h-full">
       <div class="flex-grow py-5 px-10  flex flex-col overflow-hidden relative h-full">
         <div class="flex-none mb-5">
@@ -9,11 +9,11 @@
           </h4>
           <time class="text-gray-800 text-xl font-semibold" datetime="{{ post.date | dateToFormat('yyyy-LL-dd') }}">{{ post.date | dateToFormat('dd LLL yyyy') }}</time>
         </div>
-        <article class="text-gray-800 font-default text-xl overflow-ellipsis overflow-hidden flex-grow">
+        <article class="text-gray-800 font-default text-xl overflow-ellipsis overflow-hidden flex-grow bg-chocolate-100 bg-opacity-10 rounded">
           {{post.data.blurb}}
         </article>
       </div>
-      <div class="h-full w-full md:w-1/2 flex-none border-l-4 border-blush-700 border-opacity-60">
+      <div class="h-full w-full md:w-1/2 flex-none border-l-2 border-blush-700 border-opacity-60">
         <img src="{{ post.data.image_url }}" class="h-full w-full object-cover rounded-tr rounded-br" />
       </div>
     </a>
