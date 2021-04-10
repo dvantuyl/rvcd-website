@@ -1,7 +1,13 @@
 const path = require('path')
 const TerserJSPlugin = require('terser-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
+  mode: 'development',
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['.js'],
+  },
   entry: path.resolve(__dirname, 'src/assets/scripts/main.js'),
   output: {
     path: path.resolve(__dirname, 'dist/assets'),
@@ -9,7 +15,11 @@ module.exports = {
   optimization: {
     minimizer: [new TerserJSPlugin({})],
   },
-  plugins: [],
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'events.css',
+    }),
+  ],
   module: {
     rules: [
       {
@@ -18,6 +28,13 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         },
+      },
+      {
+        test: /\.css$/,
+        use: [
+          { loader: MiniCssExtractPlugin.loader },
+          { loader: 'css-loader', options: { importLoaders: 1 } },
+        ],
       },
     ],
   },

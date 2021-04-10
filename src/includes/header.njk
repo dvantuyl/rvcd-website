@@ -1,3 +1,14 @@
+{% set nav_item_class %}
+  shadow-md whitespace-nowrap opacity-90 px-3
+  font-bold font-subtitle tracking-wider
+  text-blush-700 text-lg sm:text-xl md:text-2xl lg:text-3xl
+  border-l-8 border-blush-700 border-opacity-70 
+  rounded-tr rounded-br 
+  bg-chocolate-200 bg-opacity-80 hover:opacity-100 hover:border-sunset-300
+  transition duration-300 ease-out;
+{% endset %}
+
+
 <header role="banner" class="flex flex-col items-center z-10 relative top-20 pl-10 container mx-auto h-full">
     <a href="{{ build.url }}" rel="home"
         class="text-lg font-bold leading-tight">
@@ -12,7 +23,7 @@
             {%- set isParent = item.url != '/' and item.url in page.url -%}
             <li class="mb-10">
                 <a
-                    class="nav-item"
+                    class="{{nav_item_class}}"
                     href="{% if isCurrent %}#content{% else %}{{ item.url | url }}{% endif %}"
                     {% if isCurrent %}aria-current="page"{% endif %}
                 >
@@ -23,7 +34,7 @@
         </ul>
     </nav>
     <div class="w-full pt-10 border-opacity-50">
-       <a href="https://www.paypal.com/donate?hosted_button_id=DNSR3JW3RD69L" class="nav-item">
+       <a href="https://www.paypal.com/donate?hosted_button_id=DNSR3JW3RD69L" class="{{nav_item_class}}">
             ♥ GIVE
        </a>
     </div>
