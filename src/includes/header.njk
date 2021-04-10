@@ -1,3 +1,21 @@
+{% set title_class %}
+  mx-5
+  font-normal font-title tracking-wider 
+  text-sunset-300 text-6xl md:text-7xl lg:text-8xl
+  hover:text-sunset-200
+  transition duration-500 ease-in-out
+{% endset %}
+
+{% set subtitle_class %}
+    px-3 py-1 mt-12  
+    shadow-md rounded
+    font-normal font-title tracking-wider
+    text-sunset-400 hover:text-sunset-300  text-2xl  md:text-3xl lg:text-4xl text-center
+    bg-blush-700  hover:bg-blush-600   
+    transition duration-500 ease-out
+{% endset %}
+
+
 {% set nav_item_class %}
   shadow-md whitespace-nowrap opacity-90 px-3
   font-bold font-subtitle tracking-wider
@@ -5,7 +23,7 @@
   border-l-8 border-blush-700 border-opacity-70 
   rounded-tr rounded-br 
   hover:opacity-100 hover:border-sunset-300
-  transition duration-300 ease-out
+  transition duration-500 ease-out
 {% endset %}
 
 {% set current_item_class %}
@@ -18,13 +36,7 @@
     bg-opacity-80
 {% endset %}
 
-{% set title_class %}
-  mx-5
-  font-normal font-title tracking-wider 
-  text-sunset-300 text-6xl md:text-7xl lg:text-8xl
-  hover:text-sunset-200
-  transition duration-300 ease-out
-{% endset %}
+
 
 
 <header role="banner" class="flex flex-col items-center z-10 relative top-20 pl-10 container mx-auto h-full">
@@ -32,7 +44,7 @@
         class="text-lg font-bold leading-tight">
         <h1 class="{{ title_class }}">Rainier</h1>
         <h1 class="{{ title_class }}">Valley</h1>
-        <h2 class="font-normal bg-blush-700 text-sunset-400 hover:bg-blush-600 hover:text-sunset-300 ease-out rounded font-title text-2xl transition duration-300 md:text-3xl lg:text-4xl text-center px-3 py-1 mt-12 tracking-wider shadow-md">Creative District</h2>
+        <h2 class="{{ subtitle_class }}">Creative District</h2>
     </a>
     <nav role="navigation" tabindex="-1" aria-label="Main" class="mt-20 w-full ">
         <ul class="flex flex-col  spacing-x-4 w-full justify-around sticky top-12">
