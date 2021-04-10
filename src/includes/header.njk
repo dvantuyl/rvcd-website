@@ -1,11 +1,21 @@
 {% set nav_item_class %}
   shadow-md whitespace-nowrap opacity-90 px-3
   font-bold font-subtitle tracking-wider
-  text-blush-700 text-lg sm:text-xl md:text-2xl lg:text-3xl
+  text-lg sm:text-xl md:text-2xl lg:text-3xl
   border-l-8 border-blush-700 border-opacity-70 
   rounded-tr rounded-br 
-  bg-chocolate-200 bg-opacity-80 hover:opacity-100 hover:border-sunset-300
+   hover:opacity-100 hover:border-sunset-300
   transition duration-300 ease-out;
+{% endset %}
+
+{% set current_item_class %}
+    bg-blush-700 text-sunset-400
+    bg-opacity-100
+{% endset %}
+
+{% set inactive_item_class %}
+    bg-chocolate-200 text-blush-700
+    bg-opacity-80
 {% endset %}
 
 {% set title_class %}
@@ -20,7 +30,7 @@
         class="text-lg font-bold leading-tight">
         <h1 class="{{ title_class }}">Rainier</h1>
         <h1 class="{{ title_class }}">Valley</h1>
-        <h2 class="font-normal bg-blush-700 text-sunset-400 hover:bg-sunset-300 hover:text-blush-700 ease-out rounded font-title text-2xl transition duration-300 md:text-3xl lg:text-4xl text-center px-3 py-1 mt-12 tracking-wider shadow-md">Creative District</h2>
+        <h2 class="font-normal bg-blush-700 text-sunset-400 hover:bg-blush-600 hover:text-sunset-300 ease-out rounded font-title text-2xl transition duration-300 md:text-3xl lg:text-4xl text-center px-3 py-1 mt-12 tracking-wider shadow-md">Creative District</h2>
     </a>
     <nav role="navigation" tabindex="-1" aria-label="Main" class="mt-20 w-full ">
         <ul class="flex flex-col  spacing-x-4 w-full justify-around sticky top-12">
@@ -29,7 +39,7 @@
             {%- set isParent = item.url != '/' and item.url in page.url -%}
             <li class="mb-10">
                 <a
-                    class="{{nav_item_class}}"
+                    class="{{nav_item_class}} {% if isCurrent %}{{current_item_class}}{% else %}{{inactive_item_class}}{% endif %}"
                     href="{% if isCurrent %}#content{% else %}{{ item.url | url }}{% endif %}"
                     {% if isCurrent %}aria-current="page"{% endif %}
                 >
@@ -40,7 +50,7 @@
         </ul>
     </nav>
     <div class="w-full pt-10 border-opacity-50">
-       <a href="https://www.paypal.com/donate?hosted_button_id=DNSR3JW3RD69L" class="{{nav_item_class}}">
+       <a href="https://www.paypal.com/donate?hosted_button_id=DNSR3JW3RD69L" class="{{nav_item_class}} {{inactive_item_class}}">
             ♥ GIVE
        </a>
     </div>
