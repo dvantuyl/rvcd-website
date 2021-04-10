@@ -7,7 +7,3 @@ tags: ['post', 'home']
 date: 2020-07-05
 blurb: These are people
 ---
-
-## There's a lady
-
-### There's a child
