@@ -8,12 +8,18 @@
   transition duration-300 ease-out;
 {% endset %}
 
+{% set title_class %}
+  mx-5
+  font-normal font-title tracking-wider 
+  text-sunset-300 text-6xl md:text-7xl lg:text-8xl
+{% endset %}
+
 
 <header role="banner" class="flex flex-col items-center z-10 relative top-20 pl-10 container mx-auto h-full">
     <a href="{{ build.url }}" rel="home"
         class="text-lg font-bold leading-tight">
-        <h1 class="font-normal font-title text-sunset-300 text-6xl md:text-7xl lg:text-8xl tracking-wider mx-5">Rainier</h1>
-        <h1 class="font-normal font-title text-sunset-300 text-6xl md:text-7xl lg:text-8xl tracking-wider mx-5">Valley</h1>
+        <h1 class="{{ title_class }}">Rainier</h1>
+        <h1 class="{{ title_class }}">Valley</h1>
         <h2 class="font-normal bg-blush-700 text-sunset-400 hover:bg-sunset-300 hover:text-blush-700 ease-out rounded font-title text-2xl transition duration-300 md:text-3xl lg:text-4xl text-center px-3 py-1 mt-12 tracking-wider shadow-md">Creative District</h2>
     </a>
     <nav role="navigation" tabindex="-1" aria-label="Main" class="mt-20 w-full ">
