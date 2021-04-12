@@ -17,7 +17,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'events.css',
+      filename: 'calendar.css',
     }),
   ],
   module: {

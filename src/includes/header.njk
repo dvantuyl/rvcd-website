@@ -7,7 +7,8 @@
 {% endset %}
 
 {% set subtitle_class %}
-    px-3 py-1 mt-12  
+    px-3 py-1 mt-12
+    w-96 lg:w-auto
     shadow-md rounded
     font-normal font-title tracking-wider
     text-sunset-400 hover:text-sunset-300  text-2xl  md:text-3xl lg:text-4xl text-center
@@ -19,7 +20,7 @@
 {% set nav_item_class %}
   shadow-md whitespace-nowrap opacity-90 px-3
   font-bold font-subtitle tracking-wider
-  text-lg sm:text-xl md:text-2xl lg:text-3xl
+  text-2xl lg:text-3xl
   border-l-8 border-blush-700 border-opacity-70 
   rounded-tr rounded-br 
   hover:opacity-100 hover:border-sunset-300
@@ -39,19 +40,18 @@
 
 
 
-<header role="banner" class="flex flex-col items-center z-10 relative top-20 pl-10 container mx-auto h-full">
-    <a href="{{ build.url }}" rel="home"
-        class="text-lg font-bold leading-tight">
+<header role="banner" class="flex flex-col items-center z-10 relative container mx-auto h-full">
+    <a href="{{ build.url }}" rel="home">
         <h1 class="{{ title_class }}">Rainier</h1>
         <h1 class="{{ title_class }}">Valley</h1>
         <h2 class="{{ subtitle_class }}">Creative District</h2>
     </a>
-    <nav role="navigation" tabindex="-1" aria-label="Main" class="mt-20 w-full ">
-        <ul class="flex flex-col  spacing-x-4 w-full justify-around sticky top-12">
+    <nav role="navigation" tabindex="-1" aria-label="Main" class="w-96 lg:w-auto mt-10 lg:mt-20 mr-auto ml-auto lg:ml-0">
+        <ul class="flex flex-col spacing-x-4 w-full">
         {%- for item in collections.all | eleventyNavigation -%}
             {%- set isCurrent = (item.url == page.url) -%}
             {%- set isParent = item.url != '/' and item.url in page.url -%}
-            <li class="mb-10">
+            <li class="mb-10 mr-10">
                 <a
                     class="{{nav_item_class}} {% if isCurrent %}{{current_item_class}}{% else %}{{inactive_item_class}}{% endif %}"
                     href="{% if isCurrent %}#content{% else %}{{ item.url | url }}{% endif %}"
@@ -61,11 +61,11 @@
                 </a>
             </li>
         {%- endfor -%}
+            <li class="mb-10 lg:mt-10">
+                <a href="https://www.paypal.com/donate?hosted_button_id=DNSR3JW3RD69L" class="{{nav_item_class}} {{inactive_item_class}}">  
+                    ♥ GIVE
+                </a>
+            </li>
         </ul>
     </nav>
-    <div class="w-full pt-10 border-opacity-50">
-       <a href="https://www.paypal.com/donate?hosted_button_id=DNSR3JW3RD69L" class="{{nav_item_class}} {{inactive_item_class}}">
-            ♥ GIVE
-       </a>
-    </div>
 </header>
