@@ -32,3 +32,5 @@ The legislation was passed by the City Council on February 22, 2021 and submitte
 ### Why was the Rainier Valley chosen?
 
 The Rainier Valley and its many neighborhoods represent some of the greatest racial and economic diversity in Seattle, and face some of the greatest development pressures and displacement risks in Seattle. Creative Districts help communities thrive, and work to support communities turn cultural activities into economic growth.
+
+<p class="text-blush-700">The Rainier Valley Creative District is Organized and Fiscally Sponsored by Adefua Cultural Education Workshop.</p>
