@@ -3,7 +3,7 @@ title: Planning Meeting
 layout: post
 image_url: 'https://www.adefuacenter.org/uploads/1/3/4/1/134178834/published/email-your-thoughts.png?1614725806'
 tags: ['post', 'home']
-date: 2021-06-09
+date: 2021-06-08
 blurb: Having A Creative Community, ARE YOU INTERESTED? Rainier Valley Creative District is in South Seattle... Let's come together to making it happen!
 ---
 
