@@ -1,8 +1,8 @@
 <ol reversed class="w-full">
-{% for post in collections.post | reverse %}
-  <li class="h-auto lg:h-80 w-full rounded z-50 mb-10 shadow-lg">
+{% for post in collections.home | reverse %}
+  <li class="h-auto lg:h-80 w-full rounded z-50 mb-10 shadow-lg bg-gradient-to-r from-chocolate-100 to-chocolate-200">
     <a href="{{ post.url | url }}" class="flex flex-col-reverse lg:flex-row w-full justify-end h-full">
-      <div class="flex-grow py-5 pl-10 pr-5 flex flex-col overflow-hidden relative h-auto lg:h-full bg-gradient-to-r from-chocolate-100 to-chocolate-200">
+      <div class="flex-grow py-5 pl-10 pr-5 flex flex-col overflow-hidden relative h-auto lg:h-full ">
         <div class="border-r-4 border-blush-700 border-opacity-10 border-dashed h-full pr-5">
           <div class="flex-none mb-5">
             <h4 class="block font-subtitle text-blush-700 text-3xl font-semibold">
@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="h-full w-full lg:w-1/2 flex-none">
-        <img src="{{ post.data.image_url }}" class="h-full w-full object-cover rounded-tr rounded-br max-h-80" />
+        <img src="{{ post.data.image_url }}" class="h-full w-full object-contain rounded-tr rounded-br max-h-80" />
       </div>
     </a>
   </li>
