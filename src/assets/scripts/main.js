@@ -18,6 +18,12 @@ document.addEventListener('DOMContentLoaded', function () {
     return
   }
 
+  var today = new Date()
+  var dd = String(today.getDate()).padStart(2, '0')
+  var mm = String(today.getMonth() + 1).padStart(2, '0') //January is 0!
+  var yyyy = today.getFullYear()
+  today = yyyy + '-' + mm + '-' + dd
+
   var calendar = new Calendar(calendarEl, {
     plugins: [interactionPlugin, dayGridPlugin, timeGridPlugin, listPlugin],
     headerToolbar: {
@@ -25,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek',
     },
-    initialDate: '2021-06-06',
+    initialDate: today,
     navLinks: true, // can click day/week names to navigate views
     editable: true,
     dayMaxEvents: true, // allow "more" link when too many events
